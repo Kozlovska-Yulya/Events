@@ -20,5 +20,5 @@ divElem.addEventListener('click', logGreenDiv);
 pElem.addEventListener('click', logGreyP, true);
 pElem.addEventListener('click', logGreenP);
 
-pElem.addEventListener('click', logGreySpan, true);
-pElem.addEventListener('click', logGreenSpan);
+spanElem.addEventListener('click', logGreySpan, true);
+spanElem.addEventListener('click', logGreenSpan);
