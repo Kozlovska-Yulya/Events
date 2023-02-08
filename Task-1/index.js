@@ -58,3 +58,7 @@ function attachBtn() {
 }
 
 btnAttachElem.addEventListener('click', attachBtn);
+
+document.addEventListener('DOMContentLoaded', () => {
+  attachBtn();
+});
