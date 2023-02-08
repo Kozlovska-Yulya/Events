@@ -28,5 +28,19 @@ const btnClearElem = document.querySelector('.clear-btn');
 function clearBtn() {
   eventsListElem.innerHTML = '';
 }
-
 btnClearElem.addEventListener('click', clearBtn);
+
+const btnRemoveElem = document.querySelector('.remove-handlers-btn');
+
+function removeBtn() {
+  divElem.removeEventListener('click', logGreyDiv, true);
+  divElem.removeEventListener('click', logGreenDiv);
+
+  pElem.removeEventListener('click', logGreyP, true);
+  pElem.removeEventListener('click', logGreenP);
+
+  spanElem.removeEventListener('click', logGreySpan, true);
+  spanElem.removeEventListener('click', logGreenSpan);
+}
+
+btnRemoveElem.addEventListener('click', removeBtn);
