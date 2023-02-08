@@ -44,3 +44,17 @@ function removeBtn() {
 }
 
 btnRemoveElem.addEventListener('click', removeBtn);
+
+const btnAttachElem = document.querySelector('.attach-handlers-btn');
+function attachBtn() {
+  divElem.addEventListener('click', logGreyDiv, true);
+  divElem.addEventListener('click', logGreenDiv);
+
+  pElem.addEventListener('click', logGreyP, true);
+  pElem.addEventListener('click', logGreenP);
+
+  spanElem.addEventListener('click', logGreySpan, true);
+  spanElem.addEventListener('click', logGreenSpan);
+}
+
+btnAttachElem.addEventListener('click', attachBtn);
