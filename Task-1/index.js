@@ -1,9 +1,9 @@
 const divElem = document.querySelector('.rect_div');
 const pElem = document.querySelector('.rect_p');
 const spanElem = document.querySelector('.rect_span');
+const eventsListElem = document.querySelector('.events-list');
 
 const logTarget = (text, color) => {
-  const eventsListElem = document.querySelector('.events-list');
   eventsListElem.innerHTML += `<span style="color: ${color}; margin-left: 8px">${text}</span>`;
 };
 const logGreenDiv = logTarget.bind(null, 'DIV', 'green');
@@ -23,11 +23,10 @@ pElem.addEventListener('click', logGreenP);
 spanElem.addEventListener('click', logGreySpan, true);
 spanElem.addEventListener('click', logGreenSpan);
 
-// /
 const btnClearElem = document.querySelector('.clear-btn');
 
 function clearBtn() {
-  let eventsListElem = (eventsListElem.innerHTML = '');
+  eventsListElem.innerHTML = '';
 }
 
 btnClearElem.addEventListener('click', clearBtn);
