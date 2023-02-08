@@ -27,14 +27,7 @@ spanElem.addEventListener('click', logGreenSpan);
 const btnClearElem = document.querySelector('.clear-btn');
 
 function clearBtn() {
-  divElem.removeEventListener('click', logGreyDiv, true);
-  divElem.removeEventListener('click', logGreenDiv);
-
-  pElem.removeEventListener('click', logGreyP, true);
-  pElem.removeEventListener('click', logGreenP);
-
-  spanElem.removeEventListener('click', logGreySpan, true);
-  spanElem.removeEventListener('click', logGreenSpan);
+  let eventsListElem = (eventsListElem.innerHTML = '');
 }
 
 btnClearElem.addEventListener('click', clearBtn);
